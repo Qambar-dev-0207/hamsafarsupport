@@ -13,12 +13,11 @@ const stepIcons = [
   Sparkles
 ];
 
-const stepIllustrations = {
-  2: '/images/humsafar_legal_counseling_illustration.png',
-  5: '/images/humsafar_youth_tarang_illustration.png'
+const stepPhotos = {
+  2: '/images/humsafar_legal_counseling_real.png',
+  5: '/images/humsafar_youth_tarang_real.png'
 };
 
-// Distinct Bento Theme per step using user's exact palette
 const cardThemes = [
   "bg-[#542437] text-[#F0F4F1] border-2 border-[#B8839F]/30 shadow-xl", // Step 1: Deep Plum
   "bg-[#B8839F] text-white border-2 border-white/20 shadow-xl",       // Step 2: Rose Mauve
@@ -62,7 +61,7 @@ export const HowWeHelp = () => {
           
           {t.steps.map((item, index) => {
             const Icon = stepIcons[index] || Sparkles;
-            const illustrationSrc = stepIllustrations[index];
+            const photoSrc = stepPhotos[index];
             const themeClass = cardThemes[index] || "bg-white text-[#542437]";
 
             return (
@@ -86,8 +85,8 @@ export const HowWeHelp = () => {
                     </div>
                   </div>
 
-                  {/* Description & Optional Vector Art */}
-                  <div className={`${illustrationSrc ? 'lg:col-span-5' : 'lg:col-span-8'} space-y-3`}>
+                  {/* Description & Photorealistic Image */}
+                  <div className={`${photoSrc ? 'lg:col-span-5' : 'lg:col-span-8'} space-y-3`}>
                     <h3 className="font-display text-2xl sm:text-3xl font-extrabold leading-tight">
                       {item.title}
                     </h3>
@@ -108,14 +107,14 @@ export const HowWeHelp = () => {
                     )}
                   </div>
 
-                  {/* Vector Illustration */}
-                  {illustrationSrc && (
+                  {/* Photorealistic Photo Card */}
+                  {photoSrc && (
                     <div className="lg:col-span-3 flex justify-center">
-                      <div className="p-3 bg-white rounded-2xl shadow-md border border-[#B8839F]/30">
+                      <div className="p-2 bg-white rounded-2xl shadow-lg border border-[#B8839F]/30 overflow-hidden group">
                         <img
-                          src={illustrationSrc}
+                          src={photoSrc}
                           alt={item.title}
-                          className="w-full max-w-[210px] h-auto object-contain"
+                          className="w-full max-w-[240px] h-[180px] object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
                         />
                       </div>
                     </div>

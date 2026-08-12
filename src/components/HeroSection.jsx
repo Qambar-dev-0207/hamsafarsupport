@@ -79,27 +79,29 @@ export const HeroSection = () => {
 
           </motion.div>
 
-          {/* Right Column: Floating AI Vector Artwork Container */}
+          {/* Right Column: Photorealistic Hero Photo Container */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             className="lg:col-span-5 flex justify-center items-center"
           >
-            <div className="relative p-8 rounded-3xl bg-white border-2 border-[#B8839F]/30 shadow-2xl overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-tr from-[#B8839F]/10 via-transparent to-[#ED8584]/10 opacity-60" />
-              
-              <img
-                src="/images/humsafar_hero_illustration.png"
-                alt="HUMSAFAR Support Community Vector Artwork"
-                className="relative z-10 w-full h-auto max-h-[440px] object-contain drop-shadow-md group-hover:scale-102 transition-transform duration-500"
-              />
+            <div className="relative p-2 rounded-3xl bg-white border-2 border-[#B8839F]/30 shadow-2xl overflow-hidden group">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[500px]">
+                <img
+                  src="/images/humsafar_hero_real_people.png"
+                  alt="HUMSAFAR Real People Community Portrait"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                />
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-[#542437]/80 via-transparent to-transparent opacity-90" />
 
-              {/* Floating Highlight Pill */}
-              <div className="relative z-10 mt-6 flex justify-center">
-                <div className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#542437] text-white text-xs font-extrabold uppercase tracking-wider shadow-md">
-                  <HeartHandshake className="w-4 h-4 text-[#ED8584]" />
-                  <span>Humsafar Support Centre • Lucknow</span>
+                {/* Floating Highlight Pill */}
+                <div className="absolute bottom-6 left-6 right-6 flex justify-center z-10">
+                  <div className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#ED8584] text-white text-xs font-black uppercase tracking-wider shadow-lg backdrop-blur-md">
+                    <HeartHandshake className="w-4 h-4 text-white" />
+                    <span>Humsafar Support Centre • Lucknow</span>
+                  </div>
                 </div>
               </div>
             </div>

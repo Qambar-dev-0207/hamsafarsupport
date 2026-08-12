@@ -33,6 +33,7 @@ export const FocusAreas = () => {
           {t.focusCards.map((card, index) => {
             const Icon = focusIcons[index] || Heart;
             const styleClass = cardStyles[index] || "bg-white text-[#542437]";
+            const isLivelihoodCard = index === 0;
 
             return (
               <motion.div
@@ -41,7 +42,7 @@ export const FocusAreas = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.7, delay: index * 0.08 }}
-                className={`group p-8 sm:p-10 rounded-3xl transition-all duration-300 flex flex-col justify-between ${styleClass}`}
+                className={`group p-8 sm:p-10 rounded-3xl transition-all duration-300 flex flex-col justify-between overflow-hidden relative ${styleClass}`}
               >
                 <div>
                   <div className="w-14 h-14 rounded-2xl bg-white/20 flex items-center justify-center mb-6 border border-white/30 shrink-0">
@@ -52,12 +53,22 @@ export const FocusAreas = () => {
                     {card.title}
                   </h3>
 
-                  <p className="text-base sm:text-lg opacity-90 leading-relaxed font-normal">
+                  <p className="text-base sm:text-lg opacity-90 leading-relaxed font-normal mb-6">
                     {card.desc}
                   </p>
                 </div>
 
-                <div className="pt-6 mt-8 border-t border-white/20 flex items-center text-xs font-extrabold uppercase tracking-wider">
+                {isLivelihoodCard && (
+                  <div className="my-4 rounded-2xl overflow-hidden border border-white/20 max-h-[160px] shadow-md">
+                    <img
+                      src="/images/humsafar_community_reintegration_real.png"
+                      alt="Empowered Indian Woman Entrepreneur"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  </div>
+                )}
+
+                <div className="pt-6 mt-4 border-t border-white/20 flex items-center text-xs font-extrabold uppercase tracking-wider">
                   <span>Explore specialization details</span>
                   <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1.5 transition-transform" />
                 </div>
