@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: light;
+    scroll-behavior: smooth;
+    background-color: #F0F4F1;
+  }
+  
+  body {
+    background-color: #F0F4F1;
+    color: #542437;
+    font-family: "Plus Jakarta Sans", "Inter", -apple-system, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+  }
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F0F4F1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ED8584;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #E06F6E;
+}
+
+/* Minimal Editorial Stroke Numerals */
+.text-stroke-plum {
+  -webkit-text-stroke: 2px #542437;
+  color: rgba(84, 36, 55, 0.05);
+  font-family: "Inter", "Plus Jakarta Sans", sans-serif;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+}
+
+/* Sleek Floating Capsule Glass Navbar */
+.glass-nav-capsule {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(184, 131, 159, 0.25);
+  box-shadow: 0 12px 32px -8px rgba(84, 36, 55, 0.08);
+}
+
+.card-light-premium {
+  background: #FFFFFF;
+  border: 1px solid rgba(184, 131, 159, 0.25);
+  box-shadow: 0 8px 24px -6px rgba(84, 36, 55, 0.06);
+}
+
+.card-light-premium:hover {
+  border-color: rgba(237, 133, 132, 0.6);
+  box-shadow: 0 16px 36px -10px rgba(84, 36, 55, 0.12);
+}
+
+/* Reduced Motion Override */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
