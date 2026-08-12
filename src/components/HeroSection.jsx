@@ -79,7 +79,7 @@ export const HeroSection = () => {
 
           </motion.div>
 
-          {/* Right Column: Photorealistic Hero Photo Container */}
+          {/* Right Column: Low-Angle Hands Together Unity Photo */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
@@ -89,8 +89,8 @@ export const HeroSection = () => {
             <div className="relative p-2 rounded-3xl bg-white border-2 border-[#B8839F]/30 shadow-2xl overflow-hidden group">
               <div className="relative rounded-2xl overflow-hidden aspect-[4/5] max-h-[500px]">
                 <img
-                  src="/images/humsafar_hero_real_people.png"
-                  alt="HUMSAFAR Real People Community Portrait"
+                  src="/images/humsafar_hero_hands_together.jpg"
+                  alt="HUMSAFAR Hands Together Community Unity"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 
@@ -100,7 +100,7 @@ export const HeroSection = () => {
                 <div className="absolute bottom-6 left-6 right-6 flex justify-center z-10">
                   <div className="inline-flex items-center space-x-2 px-5 py-2.5 rounded-full bg-[#ED8584] text-white text-xs font-black uppercase tracking-wider shadow-lg backdrop-blur-md">
                     <HeartHandshake className="w-4 h-4 text-white" />
-                    <span>Humsafar Support Centre • Lucknow</span>
+                    <span>Hands Together in Unity • Humsafar</span>
                   </div>
                 </div>
               </div>

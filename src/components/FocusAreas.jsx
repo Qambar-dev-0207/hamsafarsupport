@@ -33,7 +33,7 @@ export const FocusAreas = () => {
           {t.focusCards.map((card, index) => {
             const Icon = focusIcons[index] || Heart;
             const styleClass = cardStyles[index] || "bg-white text-[#542437]";
-            const isLivelihoodCard = index === 0;
+            const isWomenCard = index === 0;
 
             return (
               <motion.div
@@ -58,11 +58,11 @@ export const FocusAreas = () => {
                   </p>
                 </div>
 
-                {isLivelihoodCard && (
+                {isWomenCard && (
                   <div className="my-4 rounded-2xl overflow-hidden border border-white/20 max-h-[160px] shadow-md">
                     <img
-                      src="/images/humsafar_community_reintegration_real.png"
-                      alt="Empowered Indian Woman Entrepreneur"
+                      src="/images/humsafar_community_circle.jpg"
+                      alt="Women Advocates Joined in Unity"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>

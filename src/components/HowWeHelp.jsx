@@ -14,17 +14,17 @@ const stepIcons = [
 ];
 
 const stepPhotos = {
-  2: '/images/humsafar_legal_counseling_real.png',
-  5: '/images/humsafar_youth_tarang_real.png'
+  2: '/images/humsafar_unity_hands_close_up.jpg',
+  5: '/images/humsafar_youth_huddle.jpg'
 };
 
 const cardThemes = [
   "bg-[#542437] text-[#F0F4F1] border-2 border-[#B8839F]/30 shadow-xl", // Step 1: Deep Plum
   "bg-[#B8839F] text-white border-2 border-white/20 shadow-xl",       // Step 2: Rose Mauve
-  "bg-white text-[#542437] border-2 border-[#ED8584] shadow-lg",       // Step 3: White + Coral Border (Legal)
+  "bg-white text-[#542437] border-2 border-[#ED8584] shadow-lg",       // Step 3: White + Coral Border (Legal & Unity)
   "bg-[#ED8584] text-white border-2 border-white/20 shadow-xl",       // Step 4: Coral Blush
   "bg-[#542437] text-[#F0F4F1] border-2 border-[#B8839F]/30 shadow-xl", // Step 5: Deep Plum
-  "bg-white text-[#542437] border-2 border-[#B8839F] shadow-lg",        // Step 6: White + Mauve Border (Youth)
+  "bg-white text-[#542437] border-2 border-[#B8839F] shadow-lg",        // Step 6: White + Mauve Border (Youth Huddle)
   "bg-[#B8839F]/20 text-[#542437] border-2 border-[#ED8584] shadow-md" // Step 7: Mauve Tint
 ];
 
@@ -85,7 +85,7 @@ export const HowWeHelp = () => {
                     </div>
                   </div>
 
-                  {/* Description & Photorealistic Image */}
+                  {/* Description & Photorealistic Unity Image */}
                   <div className={`${photoSrc ? 'lg:col-span-5' : 'lg:col-span-8'} space-y-3`}>
                     <h3 className="font-display text-2xl sm:text-3xl font-extrabold leading-tight">
                       {item.title}
@@ -107,7 +107,7 @@ export const HowWeHelp = () => {
                     )}
                   </div>
 
-                  {/* Photorealistic Photo Card */}
+                  {/* Photorealistic Unity Photo Card */}
                   {photoSrc && (
                     <div className="lg:col-span-3 flex justify-center">
                       <div className="p-2 bg-white rounded-2xl shadow-lg border border-[#B8839F]/30 overflow-hidden group">
